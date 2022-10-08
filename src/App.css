@@ -1,3 +1,6 @@
+*{
+  text-decoration: none;
+}
 .App {
   text-align: center;
 }
@@ -35,4 +38,73 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.primary-button {
+  background: #f02229;
+  background-image: -webkit-linear-gradient(top, #f02229, #914867);
+  background-image: -moz-linear-gradient(top, #f02229, #914867);
+  background-image: -ms-linear-gradient(top, #f02229, #914867);
+  background-image: -o-linear-gradient(top, #f02229, #914867);
+  background-image: linear-gradient(to bottom, #f02229, #914867);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  -webkit-box-shadow: 0px 1px 3px #8f008f;
+  -moz-box-shadow: 0px 1px 3px #8f008f;
+  box-shadow: 0px 1px 3px #8f008f;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #ffffff;
+  font-size: 9px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: solid;
+  transition: all linea 0.3s;
+}
+.primary-button:hover {
+  background: #eb0000;
+  text-decoration: solid;
+  font-size: 10px;
+}
+
+/* pop-up CSS-file */
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  margin-top: 66px;
+}
+
+.mymodal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  border: 1px solid #ccc;
+  background: #fff;
+  overflow: auto;
+  border-radius: 4px;
+  outline: none;
+  padding: 20px;
+}
+
+.myoverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.ReactModal__Overlay {
+  opacity: 0;
+  transition: opacity 500ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+
+.ReactModal__Overlay--before-close {
+  opacity: 0;
 }

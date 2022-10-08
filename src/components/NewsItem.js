@@ -1,14 +1,14 @@
-import React, { Component } from "react";
+import React  from "react";
 
-export class NewsItem extends Component {
-  render() {
-    let { title, description, imageUrl, newsUrl } = this.props;
+const NewsItem  = (props) => {
+ 
+    let { title, description, imageUrl, newsUrl } = props;
     return (
       <div className="my-3">
         <div className="card" style={{ width: "18rem;" }}>
           <a
             href={newsUrl}
-            target="_blank"
+            target="_blank noreferrer"
             rel="noreferrer"
             className="btn btn-sm"
           >
@@ -16,7 +16,8 @@ export class NewsItem extends Component {
               src={
                 !imageUrl
                   ? "https://images.news18.com/ibnlive/uploads/2022/05/super-earth-165364836416x9.jpg"
-                  : imageUrl
+                  :
+                   imageUrl
               }
               className="card-img-top"
               alt={title}
@@ -30,7 +31,7 @@ export class NewsItem extends Component {
         </div>
       </div>
     );
-  }
+  
 }
 
 export default NewsItem;

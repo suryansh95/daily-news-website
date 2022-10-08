@@ -52,18 +52,15 @@ export class News extends Component {
   };
 
   handleNextClick = async () => {
-    console.log("next");
-
-    let url = `https://newsapi.org/v2/top-headlines?country=${
+   let url = `https://newsapi.org/v2/top-headlines?country=${
       this.props.country
     }&category=${
       this.props.category
-    }&apiKey=37185646fc744a7899ae2bbc7a913c16 &page=${this.state.page + 1} `;
+    }&apiKey=37185646fc744a7899ae2bbc7a913c16 &page=${this.state.page + 1}`;
     this.setState({ loading: true });
     let data = await fetch(url);
     let parsedData = await data.json();
     console.log(parsedData);
-
     this.setState({
       page: this.state.page + 1,
       articles: parsedData.articles,
